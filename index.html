@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcule de Moyen</title>
+    <style>
+    h1{
+        color: black;
+        text-align: center;
+    }
+    .schedule-table.bordered, .schedule-table.bordered tr, .schedule-table.bordered th {
+    border: 1px solid #2480be;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    }
+    .day_tr td, .schedule-table th {
+        color: #fff;
+        font-size: 14px;
+        padding: 5px;
+    }
+    .day_tr, .schedule-table th {
+        background: #2480be;
+    }
+    td, th {
+        padding: 10px;
+    }
+    .day_tr td:first-letter, .schedule-table th:first-letter {
+        text-transform: uppercase;
+    }
+    .schedule-table.fixed {
+        table-layout: fixed;
+    }
+    .schedule-table {
+        margin: 0px;
+        width: 100%;
+    }
+    html {
+        color: #222;
+        font-size: 1em;
+        line-height: 1.4;
+		background-color: antiquewhite;
+        font-family: sans-serif;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+    }
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+    .optionr{
+        text-align: center;
+        font-size: large;
+        background-color: #2480be;
+    }
+    .optionr2{
+        text-align: center;
+        font-size: large;
+        background-color: #b72b4c;
+    }
+    input{
+        width: 22%;
+        height: 20px;
+        border-radius: 5px;
+        border-color: rgb(14, 123, 167);
+    }
+    .totale
+    {
+        background-color: rgba(12, 72, 53, 0.728);
+        text-align: center;
+    }
+    #calculer
+    {
+        text-align: center;
+    }
+    #calculer button
+    {
+        background-color: #2480be;
+        color: black;
+        cursor: pointer;
+        border: none;
+        width: 100px;
+        height: 30px;
+        border-radius: 30px;
+        font-size:medium;
+    }
+    #calculer button:hover
+    {
+        background-color:rgba(12, 72, 53, 0.728);
+        color: whitesmoke;
+        transition: 0.4s;
+    }
+    span{
+        background-color:antiquewhite;
+		color: black;
+    }
+    @media only screen and (max-width: 768px) {
+        
+        input[type=number] {
+            width: 70%; 
+            margin-bottom: 10px; 
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+        
+        .schedule-table, .schedule-table tr, .schedule-table th, .schedule-table td  {
+            font-size: 12px; 
+        }
+        .button{
+            font-size: 2px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <header>
+		<h1>Calcule de notes</h1>
+	</header>
+    <section>
+    <table class="schedule-table fixed bordered">
+        <thead>
+            <tr>
+            <td class="optionr" colspan="4">Matiere en regime M: </td></tr>
+                    
+            <tr>
+                <td></td>
+                <td>CC1</td>
+                <td>CC2</td>
+                <td>N.EX</td></tr>                
+            </tr>
+        </thead>
+        <tbody>
+                <tr class="regimeM bd" >
+                    <td > BASES DE DONNEES : </td>
+                      <td><input  type="number" autocomplete="on" onclick="this.value='';"></td>
+                      <td><input  type="number" autocomplete="on"  onclick="this.value='';"></td>
+                  	<td><input type="number" autocomplete="on"  onclick="this.value='';"></td></tr>
+					<tr  class="regimeM">
+                      <td> COOSI : </td>
+                      <td><input  type="number" autocomplete="on"  onclick="this.value='';"></td>
+                      <td><input  type="number" autocomplete="on"   onclick="this.value='';"></td>
+                      <td><input type="number" autocomplete="on"  onclick="this.value='';"></td></tr>
+					<tr  class="regimeM">
+                      <td> ECONOMIE NUMERIQUE : </td>
+                      <td><input  type="number" autocomplete="on"  onclick="this.value='';"></td>
+                      <td><input  type="number" autocomplete="on"  onclick="this.value='';"></td>
+                      <td><input type="number" autocomplete="on"  onclick="this.value='';"></td>
+                  </tr>
+				  <tr  class="regimeM">
+                      <td> FONDEMENTS DE L'IA : </td>
+                      <td><input type="number" autocomplete="on"  onclick="this.value='';"></td>
+                    <td><input  type="number" autocomplete="on"  onclick="this.value='';"></td>
+                      <td><input type="number" autocomplete="on"  onclick="this.value='';"></td>
+                  </tr>
+				  <tr  class="regimeM">
+                      <td> STATISTIQUE : </td>
+                      <td><input  type="number" autocomplete="on"   onclick="this.value='';"></td>
+                      <td><input type="number" autocomplete="on"  onclick="this.value='';"></td>
+                      <td><input type="number" autocomplete="on"  onclick="this.value='';"></td>
+                  </tr>
+                  <tr><td class="optionr2" colspan="4">Matiere en regime C: </td></tr>
+				  <tr class="regimeC java"  >
+                      <td> JAVA : </td>
+                      <td><input type="number" autocomplete="on"   onclick="this.value='';"></td>
+                      <td><input  type="number" autocomplete="on"  onclick="this.value='';"></td>
+                      <td><input type="number" autocomplete="on"  onclick="this.value='';"></td>
+                  </tr>
+                  <tr class="regimeC " >
+                      <td> PPP : </td>
+                      <td><input  type="number" autocomplete="on"  onclick="this.value='';"></td>
+                      <td><input  type="number" autocomplete="on"  onclick="this.value='';"></td>
+                      <td><input  type="number" autocomplete="on"  onclick="this.value='';"></td>
+                        </tr >
+                        <tr class="regimeC Csharp"  >
+                        <td> C# :  </td>
+                        <td><input  type="number" autocomplete="on"   onclick="this.value='';"></td>
+                        <td><input  type="number" autocomplete="on"  onclick="this.value='';"></td>
+                        <td><input  type="number" autocomplete="on"  onclick="this.value='';"></td>
+                    </tr>
+                        <tr class="regimeC" >
+                        <td> JAVASCRIPT : </td>
+                        <td><input  type="number" autocomplete="on"   onclick="this.value='';"></td>
+                        <td><input  type="number" autocomplete="on"   onclick="this.value='';"></td>
+                        <td><input  type="number" autocomplete="on"  onclick="this.value='';"></td>
+                    </tr>
+                  <tr class="regimeC"  >
+                      <td> MARKETING DIGITAL : </td>
+                      <td><input  type="number" autocomplete="on"  onclick="this.value='';"></td>
+                      <td><input  type="number" autocomplete="on"  onclick="this.value='';"></td>
+                      <td><input  type="number" autocomplete="on" onclick="this.value='';"></td>
+                  </tr><tr class="regimeC loit" >
+                      <td> ETHIQUE ET LOIS DES IT : </td>
+                      <td><input  type="number" autocomplete="on"   onclick="this.value='';"></td>
+                      <td><input  type="number" autocomplete="on"  onclick="this.value='';"></td>
+                      <td><input  type="number" autocomplete="on"  onclick="this.value='';"></td>
+                  </tr>
+                <tr class="regimeC" >
+                    <td> SERVICES DES RESEAUX :  </td>
+                    <td><input  type="number" autocomplete="on"  onclick="this.value='';"></td>
+                    <td><input  type="number" autocomplete="on"  onclick="this.value='';"></td>
+                    <td><input  type="number" autocomplete="on" onclick="this.value='';"></td>
+                </tr>
+                <tr id="calculer">
+                    <td colspan="4"><button class="button" type="submit" onclick="CalculerM()">Calculer</button></td>
+                </tr>
+                  <tr class="totale">
+					
+                        <td colspan="4" > Moyenne : <span id="moy">0</span></td>
+                  </tr>
+                
+                </tbody></section>
+    </table>
+    <script>
+
+        function CalculerM() {
+            // M: CC1: 10% - CC2: 20% - Examen: 70%
+            var somme = 0;
+            var tabM = document.querySelectorAll(".regimeM");
+            
+            for (let i = 0; i < tabM.length; i++) {
+                var inputs = tabM[i].querySelectorAll("input[type='number']");
+                if (inputs.length === 3) {
+                    var CC1 = parseFloat(inputs[0].value) * 0.1;
+                    var CC2 = parseFloat(inputs[1].value) * 0.2;
+                    var examen = parseFloat(inputs[2].value) * 0.7;
+                    var test = CC1 + CC2 + examen
+                    if(tabM[i].classList.contains("bd")){
+                        test *= 1.5;
+                    }
+                    somme += test;
+                }
+                   
+            }
+            // C: CC1: 20% - CC2: 40% - Examen: 40%
+            var tabC = document.querySelectorAll(".regimeC");
+            
+            for (let i = 0; i < tabC.length; i++) {
+                var inputs = tabC[i].querySelectorAll("input[type='number']");
+                if (inputs.length === 3) {
+                    var CC1 = parseFloat(inputs[0].value) * 0.2;
+                    var CC2 = parseFloat(inputs[1].value) * 0.4;
+                    var examen = parseFloat(inputs[2].value) * 0.4;
+                    var test = CC1 + CC2 + examen
+                    if(tabC[i].classList.contains("java")){
+                        test *= 1.5;
+                    }
+                    if(tabC[i].classList.contains("loit")){
+                        test *= 2;
+                    }
+                    if(tabC[i].classList.contains("Csharp")){
+                        test *= 2;
+                    }
+                    somme += test;
+                }
+               
+            }
+            document.getElementById("moy").innerHTML = (somme /15).toFixed(2); 
+        }
+    </script>
+</body>
+</html>
